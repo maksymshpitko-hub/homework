@@ -1,0 +1,123 @@
+/* ===== Сторінка ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdf8f3;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding: 30px 16px;
+}
+
+/* ===== Спільні стилі для всіх карток (один клас) ===== */
+.card {
+  box-sizing: border-box;
+  width: 250px;
+  padding: 0 22px 24px;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+  border-top: 8px solid var(--main);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+}
+
+.card__icon {
+  margin: 0 -22px 18px;
+  padding: 22px 0;
+  font-size: 54px;
+  background: var(--soft);
+}
+
+.card__title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--main);
+}
+
+.card__price {
+  margin: 0 0 12px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #2b2b2b;
+}
+
+.card__text {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.card__btn {
+  width: 100%;
+  padding: 13px 0;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--btn);
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+/* Зміна кольору кнопки при наведенні курсору */
+.card__btn:hover {
+  background: var(--btn-hover);
+}
+
+/* ===== Унікальні стилі кожної картки (окремі класи) ===== */
+.card--orange {
+  --main: #e8590c;
+  --soft: #fff0e5;
+  --btn: #f97316;
+  --btn-hover: #c2410c;
+}
+
+.card--orange .card__btn {
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.4);
+}
+
+.card--teal {
+  --main: #0f766e;
+  --soft: #e0f7f4;
+  --btn: #14b8a6;
+  --btn-hover: #0f5f59;
+}
+
+.card--teal .card__btn {
+  border: 0;
+  border-bottom: 5px solid #0d9488;
+  border-radius: 6px;
+}
+
+.card--rose {
+  --main: #be185d;
+  --soft: #ffe4ef;
+  --btn: #ec4899;
+  --btn-hover: #9d174d;
+}
+
+.card--rose .card__btn {
+  border: 3px dashed #831843;
+  border-radius: 14px;
+}
